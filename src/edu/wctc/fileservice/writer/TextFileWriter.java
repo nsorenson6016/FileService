@@ -41,7 +41,7 @@ public class TextFileWriter implements Writer{
             String writePath)throws IOException{
         List<Map<String,String>> passedData = 
                 new ArrayList<Map<String,String>>();
-        f.encodeAll(passedData,writePath);
+//        f.encodeAll(passedData,writePath);
     }
     
 }

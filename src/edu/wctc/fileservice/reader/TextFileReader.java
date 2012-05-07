@@ -59,12 +59,14 @@ public class TextFileReader implements Reader{
         this.filePath = filePath;
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Formatter garage = new MyGarageFormat();
         TextFileReader text = new TextFileReader();
         text.setFilePath("/garagedata.txt");
         text.setF(garage);
         List<Map<String,String>> dataFromDisk = text.getAllRecords();
-        System.out.println("done");
+        System.out.println("Data read");
+        garage.encodeAll(dataFromDisk, "src/data.out");
+        System.out.println("Data written");
     }
 }
