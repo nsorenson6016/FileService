@@ -1,6 +1,7 @@
 package edu.wctc.fileservice.writer;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +39,9 @@ public class TextFileWriter implements Writer{
     
     public void writeAllRecords(List<Map<String,String>> dataToPrint, 
             String writePath)throws IOException{
-        f.encodeAll(dataToPrint,writePath);
+        List<Map<String,String>> passedData = 
+                new ArrayList<Map<String,String>>();
+        f.encodeAll(passedData,writePath);
     }
     
 }
